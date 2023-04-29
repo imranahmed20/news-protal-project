@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../../../assets/logo.png'
 import moment from 'moment';
-import { Button, Container, Form, Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import Marquee from "react-fast-marquee";
+import { AuthContext } from '../../../Provider/AuthProvider';
 
 
 const Header = () => {
+    const { user } = useContext(AuthContext)
     return (
         <div className='container'>
             <div className="text-center">
@@ -19,26 +21,6 @@ const Header = () => {
                     I can be a React component, multiple React components, or just some text.
                 </Marquee>
             </div>
-            <Navbar bg="light" expand="lg" variant='light'>
-                <Container fluid>
-
-                    <Navbar.Toggle aria-controls="navbarScroll" />
-                    <Navbar.Collapse id="navbarScroll">
-                        <Nav
-                            className="mx-auto my-2 my-lg-0"
-                            style={{ maxHeight: '100px' }}
-                            navbarScroll
-                        >
-                            <Nav.Link href="#action1">Home</Nav.Link>
-                            <Nav.Link href="#action2">About</Nav.Link>
-                        </Nav>
-                        <Form className="d-flex gap-3">
-                            <Nav.Link href="#action2">Profile</Nav.Link>
-                            <Button variant="success">Login</Button>
-                        </Form>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
         </div>
     );
 };

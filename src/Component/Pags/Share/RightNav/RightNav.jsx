@@ -5,7 +5,7 @@ import Qzone from '../QZone/Qzone';
 import bg from '../../../../assets/bg.png'
 const RightNav = () => {
     return (
-        <div>
+        <div className='mt-5'>
             <h3>Login With</h3>
             <Button className='mb-2' variant="outline-primary"><FaGoogle /> Login with Google</Button>
             <Button variant="outline-secondary"><FaGithub /> Login with Github</Button>
@@ -18,7 +18,7 @@ const RightNav = () => {
                 </ListGroup>
             </div>
             <Qzone></Qzone>
-            <div className='text-center'>
+            <div className='text-center mt-3'>
                 <img src={bg} alt="" />
             </div>
         </div>
