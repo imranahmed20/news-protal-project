@@ -18,6 +18,7 @@ import LoginLayout from './Component/Layout/LoginLayout/LoginLayout';
 import Login from './Component/Pags/Login/Login';
 import Register from './Component/Pags/Register/Register';
 import ProvideRouter from './Component/Router/ProvideRouter';
+import Trams from './Component/Trams/Trams';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/term',
+        element: <Trams></Trams>
       }
     ]
 
